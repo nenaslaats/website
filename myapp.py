@@ -25,12 +25,12 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/plot.jpg')
-def plot_jpg():
+@app.route('/plot.png')
+def plot_png():
     fig = create_figure()
     output = io.BytesIO()
     FigureCanvas(fig).print_png(output)
-    return Response(output.getvalue(), mimetype='image/jpg')
+    return Response(output.getvalue(), mimetype='image/png')
 
 if __name__ == '__main__':
     app.run(debug=True)
