@@ -120,7 +120,7 @@ def create_figure():
     r3_sol=four_body_sol[:,6:9]
     r4_sol=four_body_sol[:,9:12]
     
-    fig = plt.figure(figsize = (1,1),dpi = 100)
+    fig = plt.figure(figsize = (4,4),dpi = 100)
     ax = p3.Axes3D(fig)
     #Plot van r
     line1, = ax.plot(r1_sol[:,0],r1_sol[:,1],r1_sol[:,2],color="darkblue")
