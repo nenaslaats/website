@@ -142,7 +142,7 @@ def create_figure():
     #lines = [ax.plot(dat[0, 0:1], dat[1, 0:1], dat[2, 0:1])[0] for dat in data]
     ##
     #line_ani = animation.FuncAnimation(fig, update_lines, 1000, fargs=(data, lines),
-                                       interval=1, blit=True)
+    #                                   interval=1, blit=True)
     
     ##fig1 = plt.figure()
     #data1 = r1_sol
