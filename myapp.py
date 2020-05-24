@@ -122,11 +122,11 @@ def create_figure():
     
     fig = plt.figure()
     ax = p3.Axes3D(fig)
-    ##Plot van r
-    #line1, = ax.plot(r1_sol[:,0],r1_sol[:,1],r1_sol[:,2],color="darkblue")
-    #line2, = ax.plot(r2_sol[:,0],r2_sol[:,1],r2_sol[:,2],color="tab:red")
-    #line3, = ax.plot(r3_sol[:,0],r3_sol[:,1],r3_sol[:,2],color='green')
-    #line4, = ax.plot(r4_sol[:,0],r4_sol[:,1],r4_sol[:,2],color='yellow')
+    #Plot van r
+    line1, = ax.plot(r1_sol[:,0],r1_sol[:,1],r1_sol[:,2],color="darkblue")
+    line2, = ax.plot(r2_sol[:,0],r2_sol[:,1],r2_sol[:,2],color="tab:red")
+    line3, = ax.plot(r3_sol[:,0],r3_sol[:,1],r3_sol[:,2],color='green')
+    line4, = ax.plot(r4_sol[:,0],r4_sol[:,1],r4_sol[:,2],color='yellow')
     
     def update_lines(num, dataLines, lines):
         for line, data in zip(lines, dataLines):
@@ -139,9 +139,9 @@ def create_figure():
     data = np.einsum('kli -> kil', data)
     print(data)
     #print(data)
-    lines = [ax.plot(dat[0, 0:1], dat[1, 0:1], dat[2, 0:1])[0] for dat in data]
-    #
-    line_ani = animation.FuncAnimation(fig, update_lines, 1000, fargs=(data, lines),
+    #lines = [ax.plot(dat[0, 0:1], dat[1, 0:1], dat[2, 0:1])[0] for dat in data]
+    ##
+    #line_ani = animation.FuncAnimation(fig, update_lines, 1000, fargs=(data, lines),
                                        interval=1, blit=True)
     
     ##fig1 = plt.figure()
